@@ -220,16 +220,19 @@ const handleResize = () => {
   const closeButton = document.getElementById('close-button');
   const path = document.getElementById('filter-route');
   const clearFilter = document.getElementById('clear-filters');
+  const seeResult = document.getElementById('see-results');
   if (window.innerWidth >= 769) {
     filtersPanel.style.display = 'block'; // Ensure the filter panel is displayed on desktop
     closeButton.style.display = 'none'; // Ensure the close button is not displayed on desktop
     path.style.display = 'block'; // Ensure the path is displayed on desktop
     clearFilter.style.display = 'none'; // Ensure the clear all button is not displayed on desktop
+    seeResult.style.display = 'none';
   } else {
     filtersPanel.style.display = 'none'; // Hide the filter panel on mobile
     closeButton.style.display = 'block'; // Enable the close button on mobile
     path.style.display = 'none'; // Hide the path on mobile
     clearFilter.style.display = 'block'; // Enable the clear all button on mobile
+    seeResult.style.display = 'block';
   }
 };
 
