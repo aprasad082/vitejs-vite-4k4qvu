@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venia Online Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <!--  Navbar -->
+      <div class="hamburger-menu" id="hamburger-menu">☰</div>
+      <p class="title-name" id="title-name">V E N I A</p>
+      <nav class="navbar-items" id="navbar-items">
+        <a class="navbar-item" id="home">Home <span class="white-bar"></span></a>
+        <a class="navbar-item" id="women">Women</a>
+        <a class="navbar-item" id="men">Men</a>
+        <a class="navbar-item" id="electronics">Electronics</a>
+        <a class="navbar-item" id="jewellery">Jewellery</a>
+      </nav>
+      <input type="text" id="search-bar" placeholder="Search" />
+      <div class="icon-container">
+        <i class="fa fa-shopping-bag"></i>
+        <span class="notification-number">10</span>
+      </div>
+    </header>
+
+    <section class="banner">
+      <!--  Banner -->
+      <div class="left-banner">
+        <h1>Men's Outerwear</h1>
+        <span class="blue-hr-bar"></span>
+      </div>
+      <div class="right-banner">
+        <img src="banner.png" />
+      </div>
+    </section>
+
+    <main class="mainClass">
+      <!--  Main Section -->
+      <section class="filter-price-section">
+        <!--  Filter Section -->
+        <aside class="filters" id="filters-panel">
+          <p class="filter-route" id="filter-route">Clothing / Women's / Outerwear</p>
+          <div class="filters-header">
+            <h3>Filters</h3>
+            <button class="close-button" id="close-button">×</button>
+          </div>
+          <p class="clear-filter" id="clear-filters">Clear all</p>
+          <hr />
+          <h3>Categories</h3>
+          <ul class="filter-list" id="category-filters">
+            <!-- Categories will be dynamically inserted here -->
+          </ul>
+          <hr />
+          <h3>Price Range</h3>
+          <ul class="filter-list" id="price-filters">
+            <li>
+              <input
+                type="checkbox"
+                id="price-1-50"
+                name="price-1-50"
+                value="1-50"
+              />
+              <label for="price-1-50">$1 to $50</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="price-50-100"
+                name="price-50-100"
+                value="50-100"
+              />
+              <label for="price-50-100">$50 to $100</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="price-100-200"
+                name="price-100-200"
+                value="100-200"
+              />
+              <label for="price-100-200">$100 to $200</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="price-200-500"
+                name="price-200-500"
+                value="200-500"
+              />
+              <label for="price-200-500">$200 to $500</label>
+            </li>
+            <li>
+              <input
+                type="checkbox"
+                id="price-500"
+                name="price-500"
+                value="500"
+              />
+              <label for="price-500">$500 and above</label>
+            </li>
+          </ul>
+          <button class="see-results" id="see-results">SEE RESULTS</button>
+        </aside>
+      </section>
+      <section class="product-section">
+        <!--  Product List Section -->
+        <div class="filter-sort-container" id="filter-button">
+          <div class="filter-sort-option" id="filterResults">
+            <img src="sliders.png" alt="filter" />
+            &nbsp; Filter Results
+          </div>
+          <div class="filter-sort-option" id="sort-button">
+            <img src="arrow-up.png" alt="up" />
+            <img src="arrow-down.png" alt="down" />
+            &nbsp; Sort Products
+          </div>
+        </div>
+        <div class="products-header">
+          <span id="total-results">0 Results</span>
+          <select id="sort-by-price">
+            <option value="default">Sort by Price</option>
+            <option value="high">High to Low</option>
+            <option value="low">Low to High</option>
+          </select>
+        </div>
+        <aside class="sort-panel" id="sort-panel">
+          <div class="sort-header">
+            <span>Sort by Price</span>
+            <button class="close-sort-button" id="close-sort-button">×</button>
+          </div>
+          <ul class="sort-options">
+            <li>
+              <button class="sort-option" data-sort="high">High to Low</button>
+            </li>
+            <li>
+              <button class="sort-option" data-sort="low">Low to High</button>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="products" id="products">
+          <!-- Products will be dynamically inserted here -->
+        </section>
+        <button id="load-more" style="display: none">Load More</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!--  Footer -->
+      <hr />
+      <div class="footer-column">
+        <h3>Account</h3>
+        <ul>
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Order Status</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul class="social-media">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <hr />
+      <div class="footer-bottom">
+        <p>VENIA</p>
+        <p>© Company Name Address Ave., New York 12345</p>
+        <p>
+          <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+    <div id="loading-spinner" class="spinner"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
